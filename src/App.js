@@ -25,7 +25,7 @@ import Shorturl from "./Shorturl";
 function App() {
   return (
     <div className="App">
-      <Box sx={{ flexGrow: 1, display: { md: 'flex', md: 'none' } }}>
+      <Box mt={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
       <AppBar position="static">
         <Toolbar  disableGutters>
           <Typography variant="h6" color="inherit" component="div" className='toolbar' >
