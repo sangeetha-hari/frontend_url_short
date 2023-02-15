@@ -21,6 +21,7 @@ import Forgot_password from "./Forgot_password";
 // import { Button } from "@mui/material";
 import Dashboard from "./Dashboard";
 import Shorturl from "./Shorturl";
+import Activate from "./Activate";
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
         <Route path="/checkmail" element={<Checkmail />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/shorturl" element={<Shorturl/>}  />
+        <Route path="/activate" element={<Activate />} />
       </Routes>
     </div>
   );
