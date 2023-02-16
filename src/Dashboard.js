@@ -55,7 +55,7 @@ export default function Dashboard(){
               <TableCell component="th" scope="row" className="table" noWrap="false">
                 {row.fullurl}
               </TableCell>
-              <TableCell align="right" noWrap="false">https://url-shortern.onrender.com/shorturl/{row.shorturl}</TableCell>
+              <TableCell align="right" noWrap="false"><a>https://url-shortern.onrender.com/shorturl/{row.shorturl}</a></TableCell>
               <TableCell align="right" noWrap="false">{row.date}</TableCell>
               
             </TableRow>

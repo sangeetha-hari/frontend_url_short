@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { TextField } from "@mui/material";
 import { useFormik } from "formik";
@@ -18,6 +19,7 @@ const formvali = Yup.object({
 });
 
 export default function Shorturl(){
+  const navi= useNavigate();
 
   const [done,setDone]=useState("");
 
@@ -41,7 +43,10 @@ export default function Shorturl(){
             Accept: "application/json",
             "Content-Type": "application/json",
           },
-        }).then((res)=>{console.log(res);setDone(res)})
+        }).then((res)=>{console.log(res);
+          console.log(sessionStorage.getItem("jwttoken"))
+          navi("/dashboard")
+        })
       } catch (error) {
         console.log(error);
         setDone(error);
@@ -77,7 +82,7 @@ export default function Shorturl(){
           </Button>
         </div>
             </form>
-            <h2>{done}</h2>
+            <p><a>{done}</a></p>
 
 
 
